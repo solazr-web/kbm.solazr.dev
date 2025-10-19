@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header button {
+  background: #555;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+header button:hover {
+  background: #777;
+}
+
+#serverList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.server {
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.server.online { background-color: #d4edda; border-left: 5px solid #28a745; }
+.server.nuked { background-color: #fff3cd; border-left: 5px solid #ffc107; }
+.server.offline { background-color: #f8d7da; border-left: 5px solid #dc3545; }
+.server.disabled { background-color: #e2e3e5; border-left: 5px solid #6c757d; }
+
+.server-name {
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.server-name .hover-box {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(5px);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.server-name:hover .hover-box {
+  display: block;
+}
+
+.hover-box p {
+  margin: 5px 0;
+  font-size: 14px;
+}
